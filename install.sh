@@ -38,12 +38,12 @@ acme.sh --install-cert -d ss.chli.fun --key-file /root/certs/ss.chli.fun.key --<
 sh -c 'echo "{
 \"server\":\"0.0.0.0\",
 \"server_port\":443,
-\"password\":\"H520SsSs\!\@\#\",
+\"password\":\"H520SsSs!@#\",
 \"timeout\":60,
 \"method\":\"chacha20-ietf-poly1305\",
 \"mode\":\"tcp_and_udp\",
 \"fast_open\":false,
 \"plugin\":\"v2ray-plugin\",
-\"plugin_opts\":\"server\;tls\;fast-open\;host=ss.chli.fun\;cert=/root/certs/ss.chli.fun.cer\;key=/root/certs/ss.chli.fun.key\;loglevel=none\"
+\"plugin_opts\":\"server;tls;fast-open;host=ss.chli.fun;cert=/root/certs/ss.chli.fun.cer;key=/root/certs/ss.chli.fun.key;loglevel=none\"
 }" > /etc/shadowsocks-libev/config.json'
 
