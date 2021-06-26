@@ -1,6 +1,7 @@
 apt update -y
 apt upgrade -y
-apt install curl openssh-client openssh-server shadowsocks-libev socat -y
+apt autoremove -y
+apt install curl openssh-client openssh-server shadowsocks-libev socat nginx -y
 
 mkdir ~/.ssh
 
@@ -23,7 +24,7 @@ service ssh --full-restart
 
 wget https://github.com/shadowsocks/v2ray-plugin/releases/download/v1.3.1/v2ray-plugin-linux-amd64-v1.3.1.tar.gz
 tar zxf v2ray-plugin*
-sudo mv v2ray-plugin* /usr/bin/v2ray-plugin
+mv v2ray-plugin_linux_amd64 /usr/bin/v2ray-plugin
 
 curl https://get.acme.sh | sh
 
@@ -43,6 +44,6 @@ sh -c "echo \"{
 \"mode\":\"tcp_and_udp\",
 \"fast_open\":false,
 \"plugin\":\"v2ray-plugin\",
-\"plugin_opts\":\"server;tls;fast-open;host=ss.chli.fun;cert=/home/chli/certs/ss.chli.fun.cer;key=/home/chli/certs/ss.chli.fun.key;loglevel=none\"
+\"plugin_opts\":\"server;tls;fast-open;host=ss.chli.fun;cert=/root/certs/ss.chli.fun.cer;key=/root/certs/ss.chli.fun.key;loglevel=none\"
 }\" > /etc/shadowsocks-libev/config.json"
 
