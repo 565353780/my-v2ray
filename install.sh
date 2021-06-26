@@ -44,6 +44,6 @@ sh -c "echo \"{
 \"mode\":\"tcp_and_udp\",
 \"fast_open\":false,
 \"plugin\":\"v2ray-plugin\",
-\"plugin_opts\":\"server;tls;fast-open;host=ss.chli.fun;cert=/root/certs/ss.chli.fun.cer;key=/root/certs/ss.chli.fun.key;loglevel=none\"
+\"plugin_opts\":\"server\;tls\;fast-open\;host=ss.chli.fun\;cert=/root/certs/ss.chli.fun.cer\;key=/root/certs/ss.chli.fun.key\;loglevel=none\"
 }\" > /etc/shadowsocks-libev/config.json"
 
