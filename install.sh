@@ -1,5 +1,6 @@
-apt-get update -y
-apt-get install curl openssh-client openssh-server -y
+apt update -y
+apt upgrade -y
+apt install curl openssh-client openssh-server shadowsocks-libev socat -y
 
 mkdir ~/.ssh
 
@@ -18,5 +19,12 @@ AllowUsers root\" >> /etc/ssh/sshd_config"
 
 service ssh --full-restart
 
+curl https://get.acme.sh | sh
+
+source ~/.bashrc
+
 bash <(curl -s -L https://git.io/v2ray.sh)
+
+acme.sh --register-account -m l565353780l@163.com
+acme.sh --issue -d ss.chli.fun --standalone
 
