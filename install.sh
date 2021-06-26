@@ -35,7 +35,7 @@ mkdir /root/certs
 acme.sh --issue -d ss.chli.fun --standalone
 acme.sh --install-cert -d ss.chli.fun --key-file /root/certs/ss.chli.fun.key --<em>fullchain</em>-file /root/certs/ss.chli.fun.cer --reloadcmd "systemctl restart shadowsocks-libev"
 
-sh -c "echo \'{
+sh -c 'echo "{
 \"server\":\"0.0.0.0\",
 \"server_port\":443,
 \"password\":\"H520SsSs\!\@\#\",
@@ -45,5 +45,5 @@ sh -c "echo \'{
 \"fast_open\":false,
 \"plugin\":\"v2ray-plugin\",
 \"plugin_opts\":\"server\;tls\;fast-open\;host=ss.chli.fun\;cert=/root/certs/ss.chli.fun.cer\;key=/root/certs/ss.chli.fun.key\;loglevel=none\"
-}\' > /etc/shadowsocks-libev/config.json"
+}" > /etc/shadowsocks-libev/config.json'
 
