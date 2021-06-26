@@ -1,7 +1,7 @@
 apt update -y
 apt upgrade -y
 apt autoremove -y
-apt install curl openssh-client openssh-server shadowsocks-libev socat nginx -y
+apt install curl openssh-client openssh-server shadowsocks-libev socat -y
 
 mkdir ~/.ssh
 
